@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricuras Del Pandebono</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Ricuras Del Pandebono </h1>
+        
+        <div class="products">
+            <!-- Productos -->
+            <div class="product">
+                <img src="img/pandebono.jpg" alt="Producto 1">
+                <h2>Pandebono</h2>
+                <p>Rico & Delicioso Pandebono</p>
+                <button onclick="addToCart('Pandebono x unidad', 1000)">Añadir al Carrito</button>
+            </div>
+            <!-- Añadir más productos aquí -->
+        </div>
+
+        <div class="cart">
+            <h2>Carrito de Compras 🛒...</h2>
+            <ul id="cart-items"></ul>
+            <button onclick="toggleForm()">Realizar Compra</button>
+        </div>
+
+        <div id="order-form" class="hidden">
+            <h2>Datos de Envio 📝</h2>
+
+           
+
+
+            <input type="text" id="name" placeholder="Nombre" required class="campo-grande">
+            <input type="text" id="address" placeholder="Dirección" required class="campo-grande">
+            <input type="text" id="neighborhood" placeholder="Barrio" required class="campo-grande">
+            <input type="text" id="phone" placeholder="Número de Teléfono" required class="campo-grande">
+            <input type="text" id="payment" placeholder="Con cuánto paga" required class="campo-grande">
+            <textarea id="notes" placeholder="Observaciones"></textarea>
+            <button onclick="placeOrder()">Pedir 📩</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
